@@ -5,6 +5,21 @@ Based on [Better Arabic Reshaper](https://github.com/agawish/Better-Arabic-Resha
 
 For more info visit my blog [post here](http://mpcabd.xyz/python-arabic-text-reshaper/)
 
+## Install
+You can install the library using:
+    
+    sudo pip install arabic_reshaper
+
+
+Or you can clone the code and run:
+
+    sudo python setup.py install
+
+## Usage
+
+    import arabic_reshaper
+    reshaped_text = arabic_reshaper.reshape(u'اللغة العربية رائعة')
+
 ## Known Issue
 [Harakat or Tashkeel](http://en.wikipedia.org/wiki/Arabic_diacritics#Tashkil_.28marks_used_as_phonetic_guides.29) are not supported, and I think that they can't be supported as their unicode characters are non-spacing marks (i.e. they don't take space, they are rendered in the same space of the character before them), which means that when used in a reshaper, they will be rendered on the next character as the text is reversed.
 
